@@ -130,7 +130,7 @@ class BCrypt {
   ///
   /// Use [prefix] value to generate salt (default '$2a$'),
   /// The Log2 [logRounds] of the number of rounds of hashing to apply.
-  static String gensalt({
+  static String genSalt({
     final String prefix = '\$2a',
     final int logRounds = constants.saltDefaultLogRounds,
     final Random? secureRandom,
@@ -176,7 +176,7 @@ class BCrypt {
   /// Hash a password using the OpenBSD bcrypt scheme.
   ///
   /// You need the [password] to hash and [salt] to hash you can generate using
-  /// [gensalt] function.
+  /// [genSalt] function.
   static String hashpw(final String password, final String salt) {
     final int saltLength = salt.length;
     if (saltLength < 28) {

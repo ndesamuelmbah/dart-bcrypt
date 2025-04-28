@@ -33,7 +33,7 @@ dependencies:
 Use Bcrypt to hash and check password.
 
 ```dart
-final String hashed = BCrypt.hashpw('password', BCrypt.gensalt());
+final String hashed = BCrypt.hashpw('password', BCrypt.genSalt());
 // $2a$10$r6huirn1laq6UXBVu6ga9.sHca6sr6tQl3Tiq9LB6/6LMpR37XEGu
 
 final bool checkPassword = BCrypt.checkpw('password', hashed);

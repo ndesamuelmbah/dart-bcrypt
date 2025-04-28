@@ -5,7 +5,7 @@ import 'package:bcrypt/bcrypt.dart';
 void main() {
   final String passwordHashed = BCrypt.hashpw(
     'password',
-    BCrypt.gensalt(),
+    BCrypt.genSalt(),
   );
   print(passwordHashed);
   final bool checkPassword = BCrypt.checkpw(
